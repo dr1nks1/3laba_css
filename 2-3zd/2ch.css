@@ -1,0 +1,86 @@
+ .nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+ }
+
+ .nav li{
+    position: relative;
+ }
+
+ .second_level, .third_level, .third_level1{
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 103%;
+ }
+ .second_level1{
+   position: absolute;
+    display: none;
+    top: 100%;
+    left: 103%;
+ }
+
+.third_level::before, .third_level1::before, .second_level1::before, .second_level::before{
+   content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 25px;
+    height: 100%;
+    background: transparent;
+}
+
+ .nav a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 12px;
+    font-style: italic;
+    text-align: center;
+ }
+
+ .show_second_level{
+    margin-top: 3px;
+    background: linear-gradient(to left, rgb(45, 45, 251,0.6), rgb(0, 255, 162));
+    border-radius: 2px;
+    box-shadow: 2px 2px rgb(4, 248, 219);
+    border: 0.1px solid black;
+ }
+
+ .show_second_level:hover{
+    background: linear-gradient(to right, rgba(21, 21, 213, 0.6), rgb(0, 255, 162));
+ }
+
+ .show_second_level:hover >.second_level, .show_second_level:hover >.second_level1{
+    display: block;
+    background: linear-gradient(to left, rgb(45, 45, 251,0.6), rgb(0, 255, 162));
+    box-shadow: 4px 4px rgb(4, 248, 219);
+    border-radius: 2px;
+    width: max-content;
+    height: 50px;
+ }
+
+.second_level:hover, .second_level1:hover{
+   border: 1px solid black;
+}
+
+.third_level:hover, .third_level1:hover{
+   border: 1px solid black;
+   border-style: groove;
+}
+
+.second_level:hover >.third_level, .second_level1:hover >.third_level1{
+    display: block;
+    background: linear-gradient(to right, rgb(45, 45, 251,0.6), rgb(0, 255, 162));
+    border-radius: 2px;
+    width: max-content;
+    box-shadow: 4px 4px rgb(4, 248, 219);
+    height: inherit;
+}
+
+.submenu{
+    width: max-content;
+}
+
